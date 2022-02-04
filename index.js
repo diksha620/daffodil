@@ -25,7 +25,7 @@ const message = {
 //   a.glossary.GlossDiv.GlossList.GlossEntry.GlossSee = 'hi';
   
 // console.log(message);
-//let Key = "";
+
 
 const json = (message) => {
     for (var key in message) {
