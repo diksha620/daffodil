@@ -21,7 +21,20 @@ const message = {
     },
   };
 
-  var a  = JSON.parse(JSON.stringify(message));
-  a.glossary.GlossDiv.GlossList.GlossEntry.GlossSee = 'hi';
+//   var a  = JSON.parse(JSON.stringify(message));
+//   a.glossary.GlossDiv.GlossList.GlossEntry.GlossSee = 'hi';
   
-console.log(message);
+// console.log(message);
+//let Key = "";
+
+const json = (message) => {
+    for (var key in message) {
+      if (typeof(message[key]) == 'object') {
+        json(message[key]);
+      } else {
+        console.log("Key: " + key + " : " + message[key]);
+      }
+    }
+  }
+
+json(message);
